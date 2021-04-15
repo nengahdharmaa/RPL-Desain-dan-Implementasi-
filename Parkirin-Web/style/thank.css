@@ -1,0 +1,29 @@
+.container{
+    display: grid;
+    place-items: center;
+}
+.date{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 700px;
+    height: 100px;
+    padding: 10px;
+    background: #FDD675;
+}
+h1, p{
+    font-family: Righteous;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 150px;
+    color: #FFFFFF;
+}
+
+p{
+    font-size: 60px;
+    color: black;
+}
+body{
+    margin: 0;
+    background: #051821;
+}
