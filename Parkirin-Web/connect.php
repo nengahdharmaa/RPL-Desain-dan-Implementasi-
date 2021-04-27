@@ -1,7 +1,11 @@
 <?php
-    $link = new mysqli('localhost','root','root','parkirin');
-    if (mysqli_connect_errno()) {
-        echo "Connection failed"
-        exit();
+    $server = "localhost";
+    $user = "root";
+    $pass = "";
+    $dbname = "parkirin";
+    $conn = new mysqli($server,$user,$pass,$dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
+    echo "Connected successfully";
 ?>

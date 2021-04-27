@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
     <head>
         <title>Pegawai</title>
@@ -11,12 +10,12 @@
                 <img src="images/id-card.png" alt="pegawai">
                 <h2>Pengunjung</h2>
             </div>
-            <form action="submit">
+            <form action="add.php" method="POST" name="formPengunjung">
                 <h3>Kendaraan</h3>
-                <input type="text" class="inputText">
+                <input type="text" class="inputText" name="tipe">
                 <h3>Plat Nomor</h3>
-                <input type="text" class="inputText">
-                <input type="button" class="inputButton" value="Submit" onclick="window.location.href='welcomePeng.html'">
+                <input type="text" class="inputText" name="plat_no">
+                <input type="submit" class="inputButton" value="Submit" name="Submit">
             </form>
         </div>
     </body>

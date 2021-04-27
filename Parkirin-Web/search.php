@@ -1,14 +1,18 @@
 <?php
-include "connect.php";
-$url_id = mysql_real_escape_string($_POST['id'])
-$sql = "SELECT id_pegawai FROM pegawai WHERE id='$url_id'";
+
+include_once("connect.php")
+
+$id = mysql_real_escape_string($_REQUEST['id']);
+$sql = "SELECT * FROM pegawai WHERE id='$id'";
 $result = mysql_query($sql)
 
 if(mysql_num_rows($sql) > 0){
-    header("Location:welcomePeg.html");
+    echo 'ID found';
+    header('Location: http://www.welcomePeg.html');
     exit;
 }
 else{ 
-    echo "Invalid ID"
+    echo 'Invalid ID';
 }    
+
 ?>
