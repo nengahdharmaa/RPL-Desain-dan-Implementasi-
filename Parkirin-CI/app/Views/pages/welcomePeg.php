@@ -19,8 +19,8 @@
             <p id="currentDate">
                 <script src="<?php echo base_url('script/datetime.js'); ?>"></script>
             </p>
-            <img src="<?php echo base_url('employee.png'); ?>" alt="employee">
-            <h2>nama pegawai</h2>
+            <img src="<?php echo base_url('images/employee.png'); ?>" alt="employee">
+            <h2>Selamat Bekerja!</h2>
         </div>
     </div>
 </body>

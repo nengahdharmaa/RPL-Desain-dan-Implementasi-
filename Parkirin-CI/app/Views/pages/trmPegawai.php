@@ -18,10 +18,10 @@
             <h2>Pegawai</h2>
         </div>
         <!-- Form input data pegawai ketika akan keluar dari tempat parkir -->
-        <form action="submit">
+        <form action="<?= base_url('Pegawai/out'); ?>" method="Get">
             <h3>ID Pegawai</h3>
-            <input type="text" class="inputText">
-            <input type="button" class="inputButton" value="Submit" onclick="window.location.href='thank.html'">
+            <input type="text" class="inputText" name="id" id="id">
+            <input type="submit" class="inputButton" value="Submit" name="submit">
         </form>
     </div>
 </body>

@@ -19,7 +19,7 @@
                 <script src="<?php echo base_url('script/datetime.js'); ?>"></script>
             </p>
             <img src="<?php echo base_url('images/id-card.png'); ?>" alt="visitor">
-            <h2>nama pengunjung</h2>
+            <h2>Selamat Berkunjung!</h2>
         </div>
     </div>
 </body>

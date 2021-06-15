@@ -2,18 +2,14 @@
 
 namespace App\Controllers;
 
-use App\Models\Pengunjung_model;
-use App\Models\Kendaraan_model;
-
+use App\Models\parkirPengunjung_model;
 
 class Pengunjung extends BaseController
 {
-    protected $pengunjungModel;
-    protected $kendaraangModel;
-
+    protected $parkirPengunjungModel;
     public function __construct()
     {
-        $this->kendaraanModel = new Kendaraan_model();
+        $this->parkirPengunjungModel = new parkirPengunjung_model();
     }
 
     public function index()
@@ -22,7 +18,13 @@ class Pengunjung extends BaseController
         return view('pages/pengunjung', $data);
     }
 
-    public function out()
+    public function welcome()
+    {
+        $data = [];
+        return view('pages/welcomePeng');
+    }
+
+    public function keluar()
     {
         $data = [];
         return view('pages/trmPengunjung');
@@ -31,12 +33,14 @@ class Pengunjung extends BaseController
     // fungsi untuk melakukan search pada database apabila data yang diinputkan ada pada database
     public function add()
     {
+        $platNo = str_replace(' ', '', $this->request->getVar('plat_no'));
         $data = [
             'tipe_kendaraan' => $this->request->getVar('tipe'),
-            'plat_nomor'     => $this->request->getVar('plat_no')
+            'platNomor'     => $platNo,
+            'tarif_parkir' => 0
         ];
-        $this->kendaraanModel->save($data);
+        $this->parkirPengunjungModel->save($data);
 
-        return redirect()->to('/thanks/index');
+        return redirect()->to('/Pengunjung/welcome');
     }
 }

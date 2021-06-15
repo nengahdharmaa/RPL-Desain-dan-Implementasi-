@@ -46,33 +46,64 @@
             </div>
         </div>
     </nav>
+    <div>
+        <form name="myform" action=<?= base_url("Admin/changeCat"); ?> method="POST">
+            <input type="submit" class="inputButton" value="Submit" name="Submit">
+        </form>
+    </div>
     <div class="content">
-        <table class="table table-striped table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">Id Tiket</th>
-                    <th scope="col">Plat Nomor</th>
-                    <th scope="col">Id Parkir</th>
-                    <th scope="col">Tanggal</th>
-                    <th scope="col">Jam Masuk</th>
-                    <th scope="col">Jam Keluar</th>
-                    <th scope="col">Tarif</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($tiket_parkir as $tp) : ?>
+        <?php if ($data["tipe"] = "0") : ?>
+            <table class="table table-striped table-hover">
+                <thead>
                     <tr>
-                        <th scope="row"><?= $tp['id_tiket']; ?></th>
-                        <td><?= $tp['plat_nomor']; ?></td>
-                        <td><?= $tp['id_parkir']; ?></td>
-                        <td><?= $tp['tanggal']; ?></td>
-                        <td><?= $tp['jam_masuk']; ?></td>
-                        <td><?= $tp['jam_keluar']; ?></td>
-                        <td><?= $tp['tarif']; ?></td>
+                        <th scope="col">Id Pegawai</th>
+                        <th scope="col">Tanggal Masuk</th>
+                        <th scope="col">Jam Masuk</th>
+                        <th scope="col">Tanggal Keluar</th>
+                        <th scope="col">Jam Keluar</th>
                     </tr>
-                <?php endforeach; ?>
                 </thead>
-        </table>
+                <tbody>
+                    <?php foreach ($Pegawai as $pg) : ?>
+                        <tr>
+                            <th scope="row"><?= $pg['id_pegawai']; ?></th>
+                            <td><?= $pg['tanggal_masuk']; ?></td>
+                            <td><?= $pg['jam_masuk']; ?></td>
+                            <td><?= $pg['tanggal_keluar']; ?></td>
+                            <td><?= $pg['jam_keluar']; ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </thead>
+            </table>
+        <?php elseif ($data["tipe"] = "1") : ?>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Id Tiket</th>
+                        <th scope="col">Tipe Kendaraan</th>
+                        <th scope="col">Plat Nomor</th>
+                        <th scope="col">Tanggal Masuk</th>
+                        <th scope="col">Jam Masuk</th>
+                        <th scope="col">Tanggal Keluar</th>
+                        <th scope="col">Jam Keluar</th>
+                        <th scope="col">Tarif</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($Pengunjung as $png) : ?>
+                        <tr>
+                            <th scope="row"><?= $png['id_tiket']; ?></th>
+                            <td><?= $png['platNomor']; ?></td>
+                            <td><?= $png['tanggal_masuk']; ?></td>
+                            <td><?= $png['jam_masuk']; ?></td>
+                            <td><?= $png['tanggal_keluar']; ?></td>
+                            <td><?= $png['jam_keluar']; ?></td>
+                            <td><?= $png['tarif_parkir']; ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </thead>
+            </table>
+        <?php endif; ?>
     </div>
 </body>
 

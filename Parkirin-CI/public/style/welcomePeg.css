@@ -1,41 +1,41 @@
-body{
-    margin: 0;
-    background: #051821;
+body {
+  margin: 0;
+  background: #051821;
 }
-.container{
-    display: grid;
-    align-content: center;
-    justify-content: center;
+.container {
+  display: grid;
+  align-content: center;
+  justify-content: center;
 }
-.content{
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    background: #F8BC24;
-    width: 1700px;
-    height: 1000px;
-    justify-items: center;
-    border-radius: 55px;
+.content {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  background: #f8bc24;
+  width: 1700px;
+  height: 1000px;
+  justify-items: center;
+  border-radius: 55px;
 }
-h1{
-    font-family: Righteous;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 120px;
-    line-height: 149px;
-    text-align: center;
-    color: #FFFFFF;
+h1 {
+  font-family: Righteous;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 120px;
+  line-height: 149px;
+  text-align: center;
+  color: #ffffff;
 }
-p{
-    font-family: Righteous;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 54px;
+p {
+  font-family: Righteous;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 54px;
 }
-h2{
-    font-family: Righteous;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 74px;
-    text-decoration-line: underline;
+h2 {
+  font-family: Righteous;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 74px;
+  text-decoration-line: underline;
 }
