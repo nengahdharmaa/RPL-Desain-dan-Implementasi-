@@ -18,6 +18,9 @@
                 <script src="<?php echo base_url('script/datetime.js'); ?>"></script>
             </p>
         </div>
+        <?php if ($tarif != null) :  ?>
+            <h1 id="price"><?php echo "Tarif: Rp.", number_format($tarif, 2, ',', '.')  ?></h1>
+        <?php endif  ?>
     </div>
 </body>
 

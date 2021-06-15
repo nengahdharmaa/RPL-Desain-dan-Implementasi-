@@ -36,7 +36,7 @@ class Pegawai extends BaseController
 
     public function goodbye()
     {
-        $data = [];
+        $data = ['tarif' => null];
         return view('pages/thank', $data);
     }
 
@@ -56,27 +56,20 @@ class Pegawai extends BaseController
 
     public function out()
     {
-        $id = $this->request->getVar('id');
-        $cond = array('id_pegawai' => $id, 'jam_keluar' => null, 'status' => 0);
+        $peg = $this->request->getVar('id');
+        $cond = array('id_pegawai' => $peg, 'jam_keluar' => null, 'status' => 0);
         $check = $this->parkirPegawaiModel->where($cond)->first();
-        $id = $check['id_parkir'][0];
-        $peg = $check['id_pegawai'][0];
-        $t_masuk = $check['tanggal_masuk'][0];
-        $j_masuk = $check['jam_masuk'][0];
         if ($check != null) {
+            $id = $check['id_parkir'][0];
             $data = [
-                'id_parkir' => $id,
-                'id_pegawai' => $peg,
-                'tanggal_masuk' => $t_masuk,
-                'jam_masuk' => $j_masuk,
                 'tanggal_keluar' => date("Y-m-d"),
                 'jam_keluar' => date('H:i'),
                 'status' => 0
             ];
-            $this->parkirPegawaiModel->update($id, $data);
+            $this->parkirPegawaiModel->updatePeg($id, $data);
             return redirect()->to(base_url('Pegawai/goodbye'));
         } else {
-            return redirect()->to(base_url('Pegawai/index'));
+            return redirect()->to(base_url('Pegawai/keluar'));
         }
     }
 }

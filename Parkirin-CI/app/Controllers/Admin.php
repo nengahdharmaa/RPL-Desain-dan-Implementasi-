@@ -19,8 +19,6 @@ class Admin extends BaseController
     public function index()
     {
         $data['Pegawai'] =  $this->parkirPegawaiModel->findall();
-        $data['tipe'] = 1;
-
         return view('pages/admin', $data);
     }
 

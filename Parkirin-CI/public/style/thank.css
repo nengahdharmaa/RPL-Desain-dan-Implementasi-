@@ -1,29 +1,38 @@
-.container{
-    display: grid;
-    place-items: center;
+.container {
+  display: grid;
+  place-items: center;
 }
-.date{
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    width: 700px;
-    height: 100px;
-    padding: 10px;
-    background: #FDD675;
+.date {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 700px;
+  height: 100px;
+  padding: 10px;
+  background: #fdd675;
 }
-h1, p{
-    font-family: Righteous;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 150px;
-    color: #FFFFFF;
+h1,
+p {
+  font-family: Righteous;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 150px;
+  color: #ffffff;
+}
+h3 .price {
+  font-family: Righteous;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 75px;
+  margin-top: 5px;
+  color: #ffffff;
 }
 
-p{
-    font-size: 60px;
-    color: black;
+p {
+  font-size: 60px;
+  color: black;
 }
-body{
-    margin: 0;
-    background: #051821;
+body {
+  margin: 0;
+  background: #051821;
 }

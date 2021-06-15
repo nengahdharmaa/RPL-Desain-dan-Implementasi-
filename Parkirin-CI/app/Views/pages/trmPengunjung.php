@@ -18,12 +18,10 @@
             <h2>Pengunjung</h2>
         </div>
         <!-- Form input data pengunjung ketika akan keluar dari tempat parkir -->
-        <form action="submit">
-            <h3>Kendaraan</h3>
-            <input type="text" class="inputText">
+        <form action="<?php echo base_url('/pengunjung/out');  ?>" method="POST" name="formPengunjung">
             <h3>Plat Nomor</h3>
-            <input type="text" class="inputText">
-            <input type="button" class="inputButton" value="Submit" onclick="window.location.href='thank.html'">
+            <input type="text" class="inputText" name="plat_no" id="plat_no">
+            <input type="submit" class="inputButton" value="Submit" name="Submit">
         </form>
     </div>
 </body>
