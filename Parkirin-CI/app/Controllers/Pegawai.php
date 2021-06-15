@@ -60,7 +60,7 @@ class Pegawai extends BaseController
         $cond = array('id_pegawai' => $peg, 'jam_keluar' => null, 'status' => 0);
         $check = $this->parkirPegawaiModel->where($cond)->first();
         if ($check != null) {
-            $id = $check['id_parkir'][0];
+            $id = $check['id_parkir'];
             $data = [
                 'tanggal_keluar' => date("Y-m-d"),
                 'jam_keluar' => date('H:i'),

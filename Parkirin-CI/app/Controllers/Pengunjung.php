@@ -62,7 +62,7 @@ class Pengunjung extends BaseController
         $cond = array('platNomor' => $tic, 'jam_keluar' => null, 'tarif_parkir' => 0);
         $check = $this->parkirPengunjungModel->where($cond)->first();
         if ($check != null) {
-            $id = $check['id_tiket'][0];
+            $id = $check['id_tiket'];
             $tgl1 = strtotime($check['tanggal_masuk']);
             $tgl2 = date("Y-m-d");
             $jam1 = strtotime($check['jam_masuk']);
