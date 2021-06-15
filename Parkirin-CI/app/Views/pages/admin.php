@@ -23,17 +23,22 @@
                         <a class="nav-link" href="#">Pengunjung</a>
                     </li>
                 </ul>
-                <form class="d-flex" action=<?= base_url("Admin/changeCat"); ?> method="POST">
-                    <select name="tp" id="tp">
-                        <option value="1">Pegawai</option>
-                        <option value="0">Pengunjung</option>
-                    </select>
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                <form class="d-flex" action=<?= base_url("Home/index"); ?> method="POST">
+                    <button type="submit" class="btn btn-danger">Logout</button>
                 </form>
             </div>
         </div>
     </nav>
+    <div>
+        <form class="d-flex" action=<?= base_url("Admin/changeCat"); ?> method="POST">
+            <select name="tp" id="tp">
+                <option value="1">Pegawai</option>
+                <option value="0">Pengunjung</option>
+            </select>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
     <div class="content">
         <?php if ($data["tipe"] = "1") : ?>
             <table class="table table-striped table-hover">
