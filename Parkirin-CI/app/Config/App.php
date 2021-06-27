@@ -23,7 +23,7 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $baseURL = 'http://localhost/Parkirin-CI/public/';
+	public $baseURL = 'http://localhost/parkirin/Parkirin-CI/public/';
 
 	/**
 	 * --------------------------------------------------------------------------

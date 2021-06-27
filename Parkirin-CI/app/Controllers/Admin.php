@@ -19,7 +19,8 @@ class Admin extends BaseController
     public function index()
     {
         $data['Pegawai'] =  $this->parkirPegawaiModel->findall();
-        return view('pages/admin', $data);
+        $data['Pengunjung'] =  $this->parkirPengunjungModel->findall();
+        return view('pages/admin_pengunjung', $data);
     }
 
     public function changeCat()
@@ -29,10 +30,10 @@ class Admin extends BaseController
         $data['Pengunjung'] =  $this->parkirPengunjungModel->findall();
         if ($cat == "1") {
             $data['tipe'] = "1";
-            return view('pages/admin', $data);
+            return view('pages/admin_pegawai', $data);
         } else {
             $data['tipe'] = "0";
-            return view('pages/admin', $data);
+            return view('pages/admin_pengunjung', $data);
         }
     }
 }

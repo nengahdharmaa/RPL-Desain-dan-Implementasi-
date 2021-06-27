@@ -6,7 +6,7 @@ var dt = t.getDate();
 var month = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
 var day = ["Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu", "Minggu"];
 var thisMonth = month[m];
-var thisDay = day[d-1];
+var thisDay = day[d];
 var minutes = t.getMinutes();
 if (minutes < 10 ){
     minutes = "0"+ minutes

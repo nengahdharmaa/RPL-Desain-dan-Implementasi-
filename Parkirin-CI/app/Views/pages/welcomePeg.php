@@ -16,7 +16,7 @@
     <div class="container">
         <div class="content">
             <!-- Menggunakan script datetime.js untuk menampilkan current time and date -->
-            <p id="currentDate">
+            <p id="currentDates">
                 <script src="<?php echo base_url('script/datetime.js'); ?>"></script>
             </p>
             <img src="<?php echo base_url('images/employee.png'); ?>" alt="employee">
